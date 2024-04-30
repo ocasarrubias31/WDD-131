@@ -1,0 +1,36 @@
+body{
+    width: 50%;
+    margin: 0 auto;
+    border: solid 1px black;
+    padding: 20px;
+}
+header{
+
+    text-align: center;
+    font-size: 70px;
+
+}
+
+header h1 {
+    text-align: center;
+    color: #006EB6;
+    font-size: 30px;
+}
+main{
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+main p{
+    text-align: left;
+    font-style: italic;
+}
+
+footer{
+    text-align: center;
+}
+footer img{
+  
+   max-height: 150px;
+}
