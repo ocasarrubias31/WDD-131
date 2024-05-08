@@ -34,3 +34,35 @@ footer img{
   
    max-height: 150px;
 }
+
+/* .dark {
+    background-color: #1e1e1e; /* Dark background color */
+    /* color: #ffffff; /* White text color */
+
+/* Define the dark theme rule */
+.dark {
+    /* Set a dark background color for the whole page */
+    background-color: #1e1e1e; /* Dark gray */
+
+    /* Set a light text color for contrast */
+    color: #ffffff; /* White text color */
+
+    /* Optional: Adjust colors of other elements such as headers, links, and buttons */
+    header, main, footer {
+        background-color: #2b2b2b; /* Darker gray */
+    }
+
+    /* Links */
+    a {
+        color: #66ccff; /* Light blue for links */
+    }
+
+    /* Buttons */
+    button {
+        background-color: #333333; /* Dark gray */
+        color: #ffffff; /* White text color */
+    }
+
+    /* Modify other styles as needed */
+    /* For example, you can add styles for borders, shadows, and other visual elements */
+}
