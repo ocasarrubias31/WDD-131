@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+body {
+    background-color: lightgray;
+}
+
+.gallery img {
+    margin-right: auto; 
+    margin-bottom: 80px;
+    margin-left: auto;
+}
+
+
+
+img {
+    width: 80%;
+    object-fit: cover;
+    border: 5px solid white; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px -4px 8px rgba(0, 0, 0, 0.1), 4px 0px 8px rgba(0, 0, 0, 0.1), -4px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
+}
+figure{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+footer {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: Mooli;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main h2 {
+    text-align: center;
+}
+footer p{
+    position: relative;
+    left: 135px;
+}
+nav ul li a {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    img {
+        border-width: 5px; 
+        box-shadow: none; 
+        max-width: 100%; 
+        margin-right: 0; 
+    }
+}
