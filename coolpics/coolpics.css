@@ -10,13 +10,14 @@ body {
     margin-left: auto;
 }
 
-
-
 img {
     width: 80%;
     object-fit: cover;
     border: 5px solid white; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px -4px 8px rgba(0, 0, 0, 0.1), 4px 0px 8px rgba(0, 0, 0, 0.1), -4px 0px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 
+                0px -4px 8px rgba(0, 0, 0, 0.1), 
+                4px 0px 8px rgba(0, 0, 0, 0.1), 
+                -4px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
 :root {
@@ -28,10 +29,12 @@ img {
     --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: Mooli, sans-serif;
 }
-figure{
+
+figure {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -68,12 +71,18 @@ nav ul li a {
 main h2 {
     text-align: center;
 }
-footer p{
+
+footer p {
     position: relative;
     left: 135px;
 }
+
 nav ul li a {
     text-decoration: underline;
+}
+
+.hide {
+    display: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -82,5 +91,49 @@ nav ul li a {
         box-shadow: none; 
         max-width: 100%; 
         margin-right: 0; 
+    }
+}
+
+/* New CSS for the modal */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+.viewer img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.close-viewer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    align-self: start;
+    justify-self: end;
+    padding: 1em;
+}
+
+@media (min-width: 768px) {
+    .viewer {
+        padding: 2em;
+        align-items: start;
+    }
+
+    .viewer img {
+        max-width: 90%;
+        max-height: 90%;
     }
 }
