@@ -1,5 +1,3 @@
-const button = document.querySelector("#button");
-
 button.addEventListener("click", () => {
     document.querySelector("#menu").classList.toggle("hide");
 });
@@ -22,6 +20,7 @@ function viewerTemplate(pic, alt) {
       <img src="${pic}" alt="${alt}">
       </div>`;
   }
+  
 
 // Function to handle viewing the image
 function viewHandler(event) {
