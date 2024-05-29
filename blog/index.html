@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Read for Fun</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="blog.js" defer></script>
+</head>
+<body>
+    <h1>Kids Read for Fun</h1>
+    
+    <header>
+        <nav id="nav-bar">
+            <ul>
+                <li>About</li>
+                <li>Archive</li>
+                <li>Search</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="articles"></div>
+        <aside class="filters">
+            <h2>Filters</h2>
+            <div>
+                <label for="sort">Sort:</label>
+                <select id="sort">
+                    <option value="date">Date</option>
+                    <option value="title">Title</option>
+                </select>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <select id="age">
+                    <option value="all">All</option>
+                    <option value="10-14">10-14</option>
+                    <option value="12-16">12-16</option>
+                </select>
+            </div>
+            <div>
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="all">All</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+            </div>
+            <div>
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="all">All</option>
+                    <option value="4">4 stars</option>
+                </select>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
