@@ -1,0 +1,50 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
+
+
+body{
+    font-family: 'Montserrat';
+}
+.p1{
+    font-family:'Montserrat';
+}
+/* Define styles */
+.colored {
+    background: linear-gradient(to bottom, #FFA500, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Hides the actual text color */
+}
+/* Additional styles */
+h4 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h4 + h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.home{
+    max-width: 400px;
+    height: 400px;
+}
+
+.home2{
+    max-width: 400px;
+    height: 400px;
+}
+
+
+.primary{
+    background: linear-gradient(to bottom, #FFA500, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Hides the actual text color */
+}
+.secondary{
+    color: lightblue;
+}
+.accent1{
+    color: blue;
+}
