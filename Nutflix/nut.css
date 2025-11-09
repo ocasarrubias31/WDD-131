@@ -219,4 +219,77 @@
     .bb-content{max-width:90%; margin-left:16px; padding-top:12vh}
     .hero-inner{grid-template-columns:1fr}
   }
-  
+  /* =========================
+   MOBILE RESPONSIVE PATCH
+   ========================= */
+
+/* Tablets & small phones */
+@media (max-width:700px){
+  /* Header */
+  .nav{gap:12px; padding:12px 16px}
+  .logo{font-size:30px; margin-right:14px}
+  .menu{
+    gap:14px; font-size:13px;
+    overflow-x:auto; white-space:nowrap;
+    -webkit-overflow-scrolling:touch;
+  }
+  .search{display:none}              /* hide search on small screens */
+  .btn{padding:6px 12px}
+
+  /* Billboard */
+  .billboard{height:42vh}
+  .bb-content{
+    max-width:88%;
+    margin-left:14px;
+    padding-top:11vh;
+  }
+  .billboard .slide img{
+    object-position:center;          /* center art on narrow screens */
+    max-height:95%;
+  }
+
+  /* Hero */
+  .hero{padding:40px 16px 8px}
+  .hero-inner{grid-template-columns:1fr; gap:18px}
+  .title{font-size:clamp(24px,7vw,36px)}
+  .desc{font-size:14px}
+
+  /* Rows / Cards */
+  .row{margin:18px auto}
+  .rail{gap:10px; padding:6px 6px 2px}
+  .card{min-width:140px; border-radius:12px}
+  .card .label{font-size:11px}
+}
+
+/* Very small phones */
+@media (max-width:420px){
+  /* Header tweaks */
+  .logo{font-size:24px}
+  .btn{font-size:12px; padding:6px 10px}
+
+  /* Billboard */
+  .billboard{height:36vh}
+  .bb-title{font-size:clamp(20px,7vw,28px)}
+  .bb-desc{font-size:13px}
+  .bb-content{padding-top:10vh; margin-left:12px}
+
+  /* Hero */
+  .tag{font-size:11px; padding:4px 8px}
+  .cta{gap:8px}
+  .cta .solid,.cta .ghost{padding:6px 10px; font-size:13px}
+
+  /* Cards */
+  .card{min-width:120px}
+}
+
+/* Safe-area padding for phones with notches */
+@supports (padding: max(0px)){
+  .nav{
+    padding-left:max(16px, env(safe-area-inset-left));
+    padding-right:max(16px, env(safe-area-inset-right));
+  }
+  .hero, .row{
+    padding-left:max(16px, env(safe-area-inset-left));
+    padding-right:max(16px, env(safe-area-inset-right));
+  }
+}
