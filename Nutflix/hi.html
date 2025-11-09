@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nutflix</title>
+<link rel="stylesheet" href="nut.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">NUTFLIX</div>
+    <nav class="menu">
+      <a class="active" href="https://pump.fun" target="_blank" rel="noopener noreferrer">Home</a>
+      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">Series</a>
+      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">Movies</a>
+      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">My List</a>
+    </nav>
+    ></div>
+    <div class="search">
+      <span>🔍</span><input placeholder="Search titles…" />
+    </div>
+    <a class="btn" href="#">Sign In</a>
+  </header>
+
+<!-- BILLBOARD / SLIDESHOW -->
+<section class="billboard" aria-label="Featured carousel">
+  <div class="slides">
+    <!-- MAIN FEATURED SLIDE -->
+    <article class="slide is-active" data-title="Nutflix Originals" data-tag="Featured • Exclusive">
+      <img src="nutt.png" alt="Nutflix Featured">
+    </article>
+
+    <!-- OTHER SLIDES -->
+    <article class="slide" data-title="Bonk Dog" data-tag="Trending • Bonk Army">
+      <img src="Bonkee.png" alt="Bonk dog meme">
+    </article>
+
+    <article class="slide" data-title="Pepe Coin" data-tag="New • Meme Legend">
+      <img src="pepee.png" alt="Pepe grabbing coin">
+    </article>
+  </div>
+
+  <div class="bb-content">
+    <span class="bb-tag"></span>
+    <h1 class="bb-title"></h1>
+    <p class="bb-desc">Exclusive Nutflix picks — where memes become legends.</p>
+    <div class="bb-cta">
+      <a class="btn solid" href="#">▶ Play</a>
+      <a class="btn ghost" href="#">ℹ More Info</a>
+    </div>
+  </div>
+
+  <button class="bb-prev" aria-label="Previous">‹</button>
+  <button class="bb-next" aria-label="Next">›</button>
+  <div class="bb-dots" role="tablist" aria-label="Slides"></div>
+</section>
+
+
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="tag">Exclusive • 4K</span>
+      <h1 class="title">Pump Coin</h1>
+      <p class="desc">
+        The ultimate meme token adventure. Where hype meets the blockchain and legends are born.
+      </p>
+      <div class="cta">
+        <a class="btn solid" href="#">▶ Play</a>
+        <a class="btn ghost" href="#">ℹ More Info</a>
+      </div>
+    </div>
+
+    <!-- pump.png replaces reddish box -->
+    <div class="hero-art">
+      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
+        <img src="pump.png" alt="Pump Coin artwork">
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- POPULAR -->
+<section class="row">
+  <h3>Popular on Nutflix</h3>
+  <div class="rail">
+    <div class="card">
+      <img src="golddog.png" alt="Gold Dog">
+      <span class="label">Gold Dog</span>
+    </div>
+    <div class="card">
+      <img src="pepe.png" alt="Pepe">
+      <span class="label">Pepe</span>
+    </div>
+    <div class="card">
+      <img src="pugy.png" alt="Pugy">
+      <span class="label">Pugy</span>
+    </div>
+    <div class="card">
+      <img src="shiba.png" alt="Shiba">
+      <span class="label">Shiba</span>
+    </div>
+    <div class="card">
+      <img src="dege.png" alt="Dege">
+      <span class="label">Dege</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTINUE WATCHING -->
+<section class="row">
+  <h3>Continue Watching</h3>
+  <div class="rail">
+    <div class="card">
+      <img src="useless.png" alt="Useless">
+      <span class="label">Useless</span>
+    </div>
+    <div class="card">
+      <img src="worthless.png" alt="Worthless">
+      <span class="label">Worthless</span>
+    </div>
+    <div class="card">
+      <img src="utility.png" alt="Utility">
+      <span class="label">Utility</span>
+    </div>
+    <div class="card">
+      <img src="PICKAXE.png" alt="Pickaxe">
+      <span class="label">Pickaxe</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING NOW -->
+<section class="row">
+  <h3>Trending Now</h3>
+  <div class="rail">
+    <div class="card">
+      <img src="bangertrending.png" alt="Banger Trending">
+      <span class="label">Banger Trending</span>
+    </div>
+    <div class="card">
+      <img src="zip227trending.png" alt="Zip227 Trending">
+      <span class="label">Zip227 Trending</span>
+    </div>
+    <div class="card">
+      <img src="coconut.png" alt="Coconut">
+      <span class="label">Coconut</span>
+    </div>
+    <div class="card">
+      <img src="giga_grape.png" alt="Giga Grape">
+      <span class="label">Giga Grape</span>
+    </div>
+  </div>
+</section>
+
+  <footer>© 2025 Nutflix</footer>
+</body>
+<script>
+  (() => {
+    const root = document.querySelector('.billboard');
+    if(!root) return;
+  
+    const slides = Array.from(root.querySelectorAll('.slide'));
+    const tagEl   = root.querySelector('.bb-tag');
+    const titleEl = root.querySelector('.bb-title');
+    const dotsBar = root.querySelector('.bb-dots');
+  
+    let i = 0, timer;
+  
+    // build dots
+    slides.forEach((_, idx) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Go to slide ' + (idx+1));
+      b.addEventListener('click', () => go(idx, true));
+      dotsBar.appendChild(b);
+    });
+  
+    const prev = root.querySelector('.bb-prev');
+    const next = root.querySelector('.bb-next');
+    prev.addEventListener('click', () => go(i - 1, true));
+    next.addEventListener('click', () => go(i + 1, true));
+  
+    function applyOverlayFrom(slide){
+      titleEl.textContent = slide.dataset.title || 'Featured';
+      tagEl.textContent   = slide.dataset.tag   || 'Now Playing';
+    }
+  
+    function go(n, user){
+      slides[i].classList.remove('is-active');
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add('is-active');
+      applyOverlayFrom(slides[i]);
+  
+      // update dots
+      dotsBar.querySelectorAll('button')
+        .forEach((d, idx) => d.setAttribute('aria-current', idx===i ? 'true' : 'false'));
+  
+      if(user) restart(); // keep it from instantly changing after a click
+    }
+  
+    function restart(){
+      clearInterval(timer);
+      timer = setInterval(() => go(i + 1, false), 6000); // 6s per slide
+    }
+  
+    // init
+    applyOverlayFrom(slides[i]);
+    go(0, false);
+    restart();
+  })();
+  </script>
+  
+</html>
