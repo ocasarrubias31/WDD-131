@@ -1,216 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nutflix</title>
-<link rel="stylesheet" href="nut.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meme Coin Gallery</title>
+  <link rel="stylesheet" href="nut.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="logo">NUTFLIX</div>
-    <nav class="menu">
-      <a class="active" href="https://pump.fun" target="_blank" rel="noopener noreferrer">Home</a>
-      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">Series</a>
-      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">Movies</a>
-      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">My List</a>
-    </nav>
-    ></div>
-    <div class="search">
-      <span>🔍</span><input placeholder="Search titles…" />
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="spark"></span>
+      <h1>Meme Coin Gallery</h1>
     </div>
-    <a class="btn" href="#">Sign In</a>
+
+    <div class="actions">
+      <input id="search" class="search" placeholder="Search coins…" />
+      <nav class="filters" aria-label="Filters">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="doge">Dogs</button>
+        <button class="chip" data-filter="frog">Frogs</button>
+        <button class="chip" data-filter="fruit">Fruit</button>
+        <button class="chip" data-filter="tools">Tools</button>
+        <button class="chip" data-filter="other">Other</button>
+      </nav>
+    </div>
   </header>
 
-<!-- BILLBOARD / SLIDESHOW -->
-<section class="billboard" aria-label="Featured carousel">
-  <div class="slides">
-    <!-- MAIN FEATURED SLIDE -->
-    <article class="slide is-active" data-title="Nutflix Originals" data-tag="Featured • Exclusive">
-      <img src="nutt.png" alt="Nutflix Featured">
-    </article>
-
-    <!-- OTHER SLIDES -->
-    <article class="slide" data-title="Bonk Dog" data-tag="Trending • Bonk Army">
-      <img src="Bonkee.png" alt="Bonk dog meme">
-    </article>
-
-    <article class="slide" data-title="Pepe Coin" data-tag="New • Meme Legend">
-      <img src="pepee.png" alt="Pepe grabbing coin">
-    </article>
-  </div>
-
-  <div class="bb-content">
-    <span class="bb-tag"></span>
-    <h1 class="bb-title"></h1>
-    <p class="bb-desc">Exclusive Nutflix picks — where memes become legends.</p>
-    <div class="bb-cta">
-      <a class="btn solid" href="#">▶ Play</a>
-      <a class="btn ghost" href="#">ℹ More Info</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Colorful. Loud. On-chain.</h2>
+      <p>Show off your collection of legendary meme coins. Click any card to zoom in, read a blurb, and link out.</p>
+      <a class="btn btn-solid" href="https://pump.fun" target="_blank" rel="noopener">Launch on Pump.Fun</a>
     </div>
-  </div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb orb-2"></div>
+  </section>
 
-  <button class="bb-prev" aria-label="Previous">‹</button>
-  <button class="bb-next" aria-label="Next">›</button>
-  <div class="bb-dots" role="tablist" aria-label="Slides"></div>
-</section>
-
-
-
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <span class="tag">Exclusive • 4K</span>
-      <h1 class="title">Pump Coin</h1>
-      <p class="desc">
-        The ultimate meme token adventure. Where hype meets the blockchain and legends are born.
-      </p>
-      <div class="cta">
-        <a class="btn solid" href="#">▶ Play</a>
-        <a class="btn ghost" href="#">ℹ More Info</a>
+  <!-- Gallery -->
+  <main class="gallery" id="gallery">
+    <!-- Each card: data-tags for filtering -->
+    <article class="card" data-title="Bonk Dog" data-tags="doge">
+      <img src="Bonkee.png" alt="Bonk Dog">
+      <div class="card-info">
+        <h3>Bonk Dog</h3>
+        <span class="pill">doge</span>
       </div>
-    </div>
+    </article>
 
-    <!-- pump.png replaces reddish box -->
-    <div class="hero-art">
-      <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-        <img src="pump.png" alt="Pump Coin artwork">
-      </a>
-    </div>
-    
-  </div>
-</section>
-
-
-<!-- POPULAR -->
-<section class="row">
-  <h3>Popular on Nutflix</h3>
-  <div class="rail">
-    <div class="card">
+    <article class="card" data-title="Gold Dog" data-tags="doge">
       <img src="golddog.png" alt="Gold Dog">
-      <span class="label">Gold Dog</span>
-    </div>
-    <div class="card">
-      <img src="pepe.png" alt="Pepe">
-      <span class="label">Pepe</span>
-    </div>
-    <div class="card">
+      <div class="card-info">
+        <h3>Gold Dog</h3>
+        <span class="pill">doge</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Pepe Coin" data-tags="frog">
+      <img src="pepee.png" alt="Pepe Coin">
+      <div class="card-info">
+        <h3>Pepe Coin</h3>
+        <span class="pill">frog</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Classic Pepe" data-tags="frog">
+      <img src="pepe.png" alt="Classic Pepe">
+      <div class="card-info">
+        <h3>Classic Pepe</h3>
+        <span class="pill">frog</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Pugy" data-tags="doge">
       <img src="pugy.png" alt="Pugy">
-      <span class="label">Pugy</span>
-    </div>
-    <div class="card">
+      <div class="card-info">
+        <h3>Pugy</h3>
+        <span class="pill">doge</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Shiba" data-tags="doge">
       <img src="shiba.png" alt="Shiba">
-      <span class="label">Shiba</span>
-    </div>
-    <div class="card">
+      <div class="card-info">
+        <h3>Shiba</h3>
+        <span class="pill">doge</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Dege" data-tags="doge">
       <img src="dege.png" alt="Dege">
-      <span class="label">Dege</span>
-    </div>
-  </div>
-</section>
+      <div class="card-info">
+        <h3>Dege</h3>
+        <span class="pill">doge</span>
+      </div>
+    </article>
 
-<!-- CONTINUE WATCHING -->
-<section class="row">
-  <h3>Continue Watching</h3>
-  <div class="rail">
-    <div class="card">
-      <img src="useless.png" alt="Useless">
-      <span class="label">Useless</span>
-    </div>
-    <div class="card">
-      <img src="worthless.png" alt="Worthless">
-      <span class="label">Worthless</span>
-    </div>
-    <div class="card">
-      <img src="utility.png" alt="Utility">
-      <span class="label">Utility</span>
-    </div>
-    <div class="card">
-      <img src="PICKAXE.png" alt="Pickaxe">
-      <span class="label">Pickaxe</span>
-    </div>
-  </div>
-</section>
-
-<!-- TRENDING NOW -->
-<section class="row">
-  <h3>Trending Now</h3>
-  <div class="rail">
-    <div class="card">
-      <img src="bangertrending.png" alt="Banger Trending">
-      <span class="label">Banger Trending</span>
-    </div>
-    <div class="card">
-      <img src="zip227trending.png" alt="Zip227 Trending">
-      <span class="label">Zip227 Trending</span>
-    </div>
-    <div class="card">
+    <article class="card" data-title="Coconut" data-tags="fruit">
       <img src="coconut.png" alt="Coconut">
-      <span class="label">Coconut</span>
-    </div>
-    <div class="card">
-      <img src="giga_grape.png" alt="Giga Grape">
-      <span class="label">Giga Grape</span>
-    </div>
-  </div>
-</section>
+      <div class="card-info">
+        <h3>Coconut</h3>
+        <span class="pill">fruit</span>
+      </div>
+    </article>
 
-  <footer>© 2025 Nutflix</footer>
-</body>
-<script>
-  (() => {
-    const root = document.querySelector('.billboard');
-    if(!root) return;
-  
-    const slides = Array.from(root.querySelectorAll('.slide'));
-    const tagEl   = root.querySelector('.bb-tag');
-    const titleEl = root.querySelector('.bb-title');
-    const dotsBar = root.querySelector('.bb-dots');
-  
-    let i = 0, timer;
-  
-    // build dots
-    slides.forEach((_, idx) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.setAttribute('aria-label', 'Go to slide ' + (idx+1));
-      b.addEventListener('click', () => go(idx, true));
-      dotsBar.appendChild(b);
+    <article class="card" data-title="Giga Grape" data-tags="fruit">
+      <img src="giga_grape.png" alt="Giga Grape">
+      <div class="card-info">
+        <h3>Giga Grape</h3>
+        <span class="pill">fruit</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Pickaxe" data-tags="tools">
+      <img src="PICKAXE.png" alt="Pickaxe">
+      <div class="card-info">
+        <h3>Pickaxe</h3>
+        <span class="pill">tools</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Banger Trending" data-tags="other">
+      <img src="bangertrending.png" alt="Banger Trending">
+      <div class="card-info">
+        <h3>Banger Trending</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Zip227" data-tags="other">
+      <img src="zip227trending.png" alt="Zip227">
+      <div class="card-info">
+        <h3>Zip227</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Useless" data-tags="other">
+      <img src="useless.png" alt="Useless">
+      <div class="card-info">
+        <h3>Useless</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Worthless" data-tags="other">
+      <img src="worthless.png" alt="Worthless">
+      <div class="card-info">
+        <h3>Worthless</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Utility" data-tags="other">
+      <img src="utility.png" alt="Utility">
+      <div class="card-info">
+        <h3>Utility</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Nutflix Original" data-tags="other">
+      <img src="nutt.png" alt="Nut original">
+      <div class="card-info">
+        <h3>Nut Original</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+
+    <article class="card" data-title="Pump Coin" data-tags="other">
+      <img src="pump.png" alt="Pump coin">
+      <div class="card-info">
+        <h3>Pump Coin</h3>
+        <span class="pill">other</span>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">© 2025 Meme Coin Gallery</footer>
+
+  <!-- Lightbox -->
+  <dialog id="lightbox">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <img id="lb-img" alt="">
+    <div class="lb-meta">
+      <h3 id="lb-title"></h3>
+      <p id="lb-desc">Community favorite. Add your own description or link.</p>
+      <a id="lb-link" class="btn btn-ghost" target="_blank" rel="noopener" href="https://pump.fun">Open on Pump.Fun</a>
+    </div>
+  </dialog>
+
+  <script>
+    // Filter + search
+    const chips = document.querySelectorAll('.chip');
+    const cards = [...document.querySelectorAll('.card')];
+    const search = document.getElementById('search');
+
+    let active = 'all';
+    chips.forEach(c => c.addEventListener('click', () => {
+      chips.forEach(x => x.classList.remove('is-active'));
+      c.classList.add('is-active');
+      active = c.dataset.filter;
+      applyFilter();
+    }));
+
+    search.addEventListener('input', applyFilter);
+
+    function applyFilter(){
+      const q = (search.value || '').toLowerCase().trim();
+      cards.forEach(el => {
+        const tags = el.dataset.tags;
+        const title = el.dataset.title.toLowerCase();
+        const matchTag = active === 'all' || tags.includes(active);
+        const matchText = !q || title.includes(q);
+        el.style.display = (matchTag && matchText) ? '' : 'none';
+      });
+    }
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbTitle = document.getElementById('lb-title');
+    const lbLink = document.getElementById('lb-link');
+    const closeBtn = document.querySelector('.lb-close');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbTitle.textContent = card.dataset.title || 'Meme';
+        lb.showModal();
+      });
     });
-  
-    const prev = root.querySelector('.bb-prev');
-    const next = root.querySelector('.bb-next');
-    prev.addEventListener('click', () => go(i - 1, true));
-    next.addEventListener('click', () => go(i + 1, true));
-  
-    function applyOverlayFrom(slide){
-      titleEl.textContent = slide.dataset.title || 'Featured';
-      tagEl.textContent   = slide.dataset.tag   || 'Now Playing';
-    }
-  
-    function go(n, user){
-      slides[i].classList.remove('is-active');
-      i = (n + slides.length) % slides.length;
-      slides[i].classList.add('is-active');
-      applyOverlayFrom(slides[i]);
-  
-      // update dots
-      dotsBar.querySelectorAll('button')
-        .forEach((d, idx) => d.setAttribute('aria-current', idx===i ? 'true' : 'false'));
-  
-      if(user) restart(); // keep it from instantly changing after a click
-    }
-  
-    function restart(){
-      clearInterval(timer);
-      timer = setInterval(() => go(i + 1, false), 6000); // 6s per slide
-    }
-  
-    // init
-    applyOverlayFrom(slides[i]);
-    go(0, false);
-    restart();
-  })();
+
+    closeBtn.addEventListener('click', () => lb.close());
+    lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
   </script>
-  
+</body>
 </html>
