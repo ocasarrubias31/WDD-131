@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ground & Grow — Reflect on Past Traumas</title>
+  <meta name="description" content="A calming, private self‑reflection page about past traumas with grounding tools, a guided self‑check, and trustworthy help links." />
+  
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 22px">
+      <div class="brand"><div class="mark" aria-hidden="true"></div><div class="title">Ground & Grow</div></div>
+      <nav class="cta">
+        <button class="btn" id="jumpCheck">Self‑check</button>
+        <button class="btn" id="jumpTools">Grounding</button>
+        <button class="btn" id="jumpJournal">Journal</button>
+        <button class="btn" id="btnPrint">Save/Print</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Gentle content note: trauma, anxiety, coping</div>
+        <h1>Look back safely. Move forward kindly.</h1>
+        <p class="lead">This private page helps you reflect on past experiences, notice patterns, and practice grounding. It does not diagnose or replace professional care.</p>
+        <div class="cta">
+          <button class="btn primary" id="start">Start guided self‑check</button>
+          <button class="btn" id="openHelp">Find help</button>
+        </div>
+      </div>
+      <aside class="card">
+        <h2 style="display:flex;align-items:center;gap:8px;margin:0 0 8px">If you need support now</h2>
+        <p class="small">U.S.: Call or text <strong>988</strong> or visit the <a href="https://988lifeline.org/" target="_blank" rel="noopener">988 Suicide & Crisis Lifeline</a> (24/7).</p>
+        <p class="small">If you are outside the U.S., search your country + “crisis line”.</p>
+        <div class="chip" role="note">Your choices on this page stay on your device.</div>
+      </aside>
+    </section>
+
+    <!-- TABBED AREA -->
+    <section class="card" style="margin-top:12px" aria-labelledby="tabs-title">
+      <h2 id="tabs-title" style="margin:0 0 6px">Explore</h2>
+      <div role="tablist" aria-label="Explore sections" class="tabs" id="tabs">
+        <button role="tab" class="tab" aria-selected="true" aria-controls="panel-check" id="tab-check">Self‑check</button>
+        <button role="tab" class="tab" aria-selected="false" aria-controls="panel-tools" id="tab-tools">Grounding tools</button>
+        <button role="tab" class="tab" aria-selected="false" aria-controls="panel-journal" id="tab-journal">Journal</button>
+        <button role="tab" class="tab" aria-selected="false" aria-controls="panel-res" id="tab-res">Resources</button>
+      </div>
+
+      <!-- PANEL: SELF-CHECK -->
+      <div id="panel-check" role="tabpanel" aria-labelledby="tab-check">
+        <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
+        <form id="formCheck">
+          <fieldset class="q"><legend>Intrusive memories or nightmares</legend>
+            <div class="scale">
+              <label><input type="radio" name="intrusions" value="0"> Not at all</label>
+              <label><input type="radio" name="intrusions" value="1"> A little</label>
+              <label><input type="radio" name="intrusions" value="2"> Often</label>
+            </div>
+          </fieldset>
+          <fieldset class="q"><legend>Avoiding reminders</legend>
+            <div class="scale">
+              <label><input type="radio" name="avoidance" value="0"> Not at all</label>
+              <label><input type="radio" name="avoidance" value="1"> A little</label>
+              <label><input type="radio" name="avoidance" value="2"> Often</label>
+            </div>
+          </fieldset>
+          <fieldset class="q"><legend>Feeling on edge or jumpy</legend>
+            <div class="scale">
+              <label><input type="radio" name="arousal" value="0"> Not at all</label>
+              <label><input type="radio" name="arousal" value="1"> A little</label>
+              <label><input type="radio" name="arousal" value="2"> Often</label>
+            </div>
+          </fieldset>
+          <fieldset class="q"><legend>Numbness, shame, or guilt</legend>
+            <div class="scale">
+              <label><input type="radio" name="mood" value="0"> Not at all</label>
+              <label><input type="radio" name="mood" value="1"> A little</label>
+              <label><input type="radio" name="mood" value="2"> Often</label>
+            </div>
+          </fieldset>
+          <fieldset class="q"><legend>Alcohol or drugs to cope</legend>
+            <div class="scale">
+              <label><input type="radio" name="subs" value="0"> Not at all</label>
+              <label><input type="radio" name="subs" value="1"> Sometimes</label>
+              <label><input type="radio" name="subs" value="2"> Often</label>
+            </div>
+          </fieldset>
+          <div class="cta">
+            <button type="button" class="btn primary" id="btnReflect">Get reflection</button>
+            <button type="button" class="btn" id="btnClear">Clear</button>
+          </div>
+        </form>
+        <div id="out" class="result" role="status" aria-live="polite"></div>
+        <p class="small" style="margin-top:8px">This is the link to help if needed</p>
+      </div>
+
+      <!-- PANEL: GROUNDING TOOLS -->
+      <div id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" hidden>
+        <div class="ground">
+          <div class="chip">🌬️ 4‑6 breathing (4 in / 6 out)</div>
+          <ol class="steps">
+            <li>Inhale through your nose for a slow count of 4. Notice the air coolness.</li>
+            <li>Exhale through your mouth for a slow count of 6. Let shoulders drop.</li>
+            <li>Repeat for 1–2 minutes. If you feel light‑headed, return to normal breathing.</li>
+          </ol>
+          <div class="chip">🖐️ 5‑4‑3‑2‑1 senses</div>
+          <ol class="steps">
+            <li>Name <strong>5</strong> things you can see.</li>
+            <li>Name <strong>4</strong> things you can feel (clothes, chair, feet on floor).</li>
+            <li>Name <strong>3</strong> things you can hear.</li>
+            <li>Name <strong>2</strong> things you can smell.</li>
+            <li>Name <strong>1</strong> thing you can taste or are grateful for.</li>
+          </ol>
+          <div class="chip">🧱 Boundaries prompt</div>
+          <ol class="steps">
+            <li>What is one small boundary I can set today? (time limit, who I’m with, what I share)</li>
+            <li>What support makes that boundary easier? (text a friend, plan exit)</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- PANEL: JOURNAL -->
+      <div id="panel-journal" role="tabpanel" aria-labelledby="tab-journal" hidden>
+        <p class="small">Your notes save only to your device (localStorage). Export to a text file anytime.</p>
+        <textarea id="notes" placeholder="Write whatever feels helpful…"></textarea>
+        <div class="cta" style="margin-top:8px">
+          <button class="btn" id="saveNotes">Save notes</button>
+          <button class="btn" id="clearNotes">Clear notes</button>
+          <button class="btn" id="exportTxt">Download .txt</button>
+        </div>
+      </div>
+
+      <!-- PANEL: RESOURCES -->
+      <div id="panel-res" role="tabpanel" aria-labelledby="tab-res" hidden>
+        <div class="res-list">
+          <div class="res">
+            <div>
+              <strong>988 Suicide & Crisis Lifeline</strong>
+              <div class="small"> Link to help</div>
+            </div>
+            <a class="tag" href="https://988lifeline.org/" target="_blank" rel="noopener">Visit</a>
+          </div>
+          <div class="res">
+            <div>
+              <strong>FindTreatment.gov</strong>
+              <div class="small">Locate mental‑health & substance‑use services (U.S.)</div>
+            </div>
+            <a class="tag" href="https://findtreatment.gov/" target="_blank" rel="noopener">Search</a>
+          </div>
+          <div class="res">
+            <div>
+              <strong>NIMH — PTSD</strong>
+              <div class="small">Symptoms, treatments, how to get help</div>
+            </div>
+            <a class="tag" href="https://www.nimh.nih.gov/health/publications/post-traumatic-stress-disorder-ptsd" target="_blank" rel="noopener">Read</a>
+          </div>
+          <div class="res">
+            <div>
+              <strong>APA — Trauma</strong>
+              <div class="small">Coping articles & guides</div>
+            </div>
+            <a class="tag" href="https://www.apa.org/topics/trauma" target="_blank" rel="noopener">Explore</a>
+          </div>
+          <div class="res">
+            <div>
+              <strong>NCTSN Resources</strong>
+              <div class="small">Child & family‑focused trauma resources</div>
+            </div>
+            <a class="tag" href="https://www.nctsn.org/resources" target="_blank" rel="noopener">Browse</a>
+          </div>
+          <div class="res">
+            <div>
+              <strong>VA National Center for PTSD</strong>
+              <div class="small">Evidence‑based info for Veterans & public</div>
+            </div>
+            <a class="tag" href="https://www.ptsd.va.gov/" target="_blank" rel="noopener">Visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:12px">
+      <h2>Privacy & Safety</h2>
+      <ul>
+        <li>All features run in your browser. Nothing is sent to a server from this page.</li>
+        <li>If you’re worried about immediate harm to yourself or someone else, contact emergency services or 988 (U.S.).</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="wrap">
+    <p>© <span id="year"></span> Ground & Grow. Educational content only.</p>
+  </footer>
+
+  <script>
+    const $ = (s)=>document.querySelector(s);
+    const $$ = (s)=>Array.from(document.querySelectorAll(s));
+
+    // Smooth navigation
+    const go = (id)=>document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    $('#jumpCheck')?.addEventListener('click',()=>go('panel-check'));
+    $('#jumpTools')?.addEventListener('click',()=>go('panel-tools'));
+    $('#jumpJournal')?.addEventListener('click',()=>go('panel-journal'));
+    $('#btnPrint')?.addEventListener('click',()=>window.print());
+    $('#start')?.addEventListener('click',()=>{$('#tab-check').click(); go('panel-check')});
+    $('#openHelp')?.addEventListener('click',()=>{$('#tab-res').click(); go('panel-res')});
+
+    // Tabs a11y
+    const tabs = $$('#tabs [role="tab"]');
+    const panels = ['panel-check','panel-tools','panel-journal','panel-res'].map(id=>document.getElementById(id));
+    tabs.forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        tabs.forEach(t=>t.setAttribute('aria-selected','false'));
+        tab.setAttribute('aria-selected','true');
+        panels.forEach(p=>p.hidden=true);
+        document.getElementById(tab.getAttribute('aria-controls')).hidden=false;
+      });
+    });
+
+    // Self-check scoring & persistence
+    const KEY = 'gg_check_v3';
+    const form = $('#formCheck');
+    const bar = $('#bar');
+    const out = $('#out');
+
+    // restore
+    const saved = JSON.parse(localStorage.getItem(KEY)||'{}');
+    Object.entries(saved).forEach(([name,val])=>{
+      const el = form.querySelector(`input[name="${name}"][value="${val}"]`);
+      if(el) el.checked = true;
+    });
+    updateProgress();
+
+    form.addEventListener('change', ()=>{
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem(KEY, JSON.stringify(data));
+      updateProgress();
+    });
+
+    function updateProgress(){
+      const fields = ['intrusions','avoidance','arousal','mood','subs'];
+      const answered = fields.filter(n=>form.querySelector(`input[name="${n}"]:checked`)).length;
+      const pct = Math.round((answered/fields.length)*100);
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', pct);
+    }
+
+    function reflect(){
+      const data = Object.fromEntries(new FormData(form).entries());
+      const vals = Object.values(data).map(Number);
+      const score = vals.reduce((a,b)=>a+b,0);
+      let msg = '';
+      if(vals.length===0){
+        msg = 'You haven\'t answered yet. A quick check‑in can help you notice patterns.';
+      } else if(score <= 2){
+        msg = 'You reported few current difficulties. Keep simple grounding habits and check in with yourself again soon.';
+      } else if(score <= 5){
+        msg = 'You noted some challenges. Consider sharing with someone you trust and practicing one grounding tool today.';
+      } else {
+        msg = 'You selected several areas that feel hard right now. It may help to talk with a clinician or counselor. You can also explore the resources tab for next steps.';
+      }
+      if(data.intrusions>0 && data.avoidance>0){
+        msg += ' Noticing both reminders and avoidance is common after hard events; trauma‑focused therapies (like CBT or EMDR) can help.';
+      }
+      out.textContent = msg + ' If distress is high or worsening, consider reaching out today.';
+      out.classList.add('show');
+    }
+
+    $('#btnReflect')?.addEventListener('click', reflect);
+    $('#btnClear')?.addEventListener('click', ()=>{
+      form.reset(); localStorage.removeItem(KEY); updateProgress(); out.textContent=''; out.classList.remove('show');
+    });
+
+    // Journal storage
+    const KEY_NOTES = 'gg_notes_v3';
+    $('#notes').value = localStorage.getItem(KEY_NOTES)||'';
+    $('#saveNotes').addEventListener('click',()=>{ localStorage.setItem(KEY_NOTES, $('#notes').value||''); alert('Saved on this device.'); });
+    $('#clearNotes').addEventListener('click',()=>{
+      if(confirm('Clear notes from this device?')){ localStorage.removeItem(KEY_NOTES); $('#notes').value=''; }
+    });
+    $('#exportTxt').addEventListener('click',()=>{
+      const blob = new Blob([$('#notes').value||''], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href=url; a.download='ground-and-grow-notes.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // Year
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
